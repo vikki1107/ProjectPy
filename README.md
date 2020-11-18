@@ -10,5 +10,5 @@ Programs developed during my academic career. These are based on the [python_pro
 ## Non-academic Programs
 Programs developed just for fun.
 - Check US immigration visa appointment dates in CANADA.
-A small program, [visaAppointmentsCAN.py](https://github.com/vikki1107/ProjectPy/visaAppointmentsCAN.py) which uses selenium and applescript to extract the available visa appointments from Canada and sends an iMessage.
-- [Caesar's Cipher](https://github.com/vikki1107/ProjectPy/caesarCipher.py) 
+A small program, [visaAppointmentsCAN.py](https://github.com/vikki1107/ProjectPy/blob/main/visaAppointmentsCAN.py) which uses selenium and applescript to extract the available visa appointments from Canada and sends an iMessage.
+- [Caesar's Cipher](https://github.com/vikki1107/ProjectPy/blob/main/caesarCipher.py) 
