@@ -5,7 +5,7 @@
 
     Refer to [phoneBilling.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/phoneBilling.py)
 
-1. Most years have 365 days. However, the time required for the Earth to orbit the Sun is actually slightly more than that. As a result, an extra day, February 29, is included in some years to correct for this difference. Such years are referred to as leap years. The rules for determining whether or not a year is a leap year follow:
+2. Most years have 365 days. However, the time required for the Earth to orbit the Sun is actually slightly more than that. As a result, an extra day, February 29, is included in some years to correct for this difference. Such years are referred to as leap years. The rules for determining whether or not a year is a leap year follow:
 Any year that is divisible by 400 is a leap year.
 Of the remaining years, any year that is divisible by 100 is NOT a leap year.
 Of the remaining years, any year that is divisible by 4 is a leap year.
@@ -14,25 +14,25 @@ All other years are NOT leap years.
 
   Refer to [checkLeapYear.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/checkLeapYear.py)
 
-1. One of the first known examples of encryption was used by Julius Caesar. Caesar needed to provide written instructions to his generals, but he didn't want his enemies to learn his plans if the message slipped into their hands. As a result, he developed what later became known as the Caesar Cipher.
+3. One of the first known examples of encryption was used by Julius Caesar. Caesar needed to provide written instructions to his generals, but he didn't want his enemies to learn his plans if the message slipped into their hands. As a result, he developed what later became known as the Caesar Cipher.
 The idea behind this cipher is simple (and as a result, it provides no protection against modern code breaking techniques). Each letter in the original message is shifted by 3 (or n) places. As a result, A becomes D, B becomes E, etc.  The last three letters in the alphabet are wrapped around to the beginning: X becomes A, Y becomes B, and Z becomes C. Non-letter characters are not modified by the cipher.
 >Write a program that implements a Caesar cipher. Allow the user to supply the message and the shift amount, and then display the shifted message. Ensure that your program encodes both uppercase and lowercase letters. Your program should also support negative shift values so that it can be used both to encode messages and decode messages.
 
   Refer to [caesarCipher.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/caesarCipher.py)
   If you are interested in a version with dictionaries then refer to [caesarCipher.py](https://github.com/vikki1107/ProjectPy/blob/main/caesarCipher.py)]
 
-1. In this exercise, your will first write a function that determines whether or not a password is good. We will define a good password to be a one that is at least 8 characters long and contains at least one uppercase letter, at least one lowercase letter, and at least one number. Your function should return True if the password passed to it as its only parameter is good. Otherwise it should return False.
+4. In this exercise, your will first write a function that determines whether or not a password is good. We will define a good password to be a one that is at least 8 characters long and contains at least one uppercase letter, at least one lowercase letter, and at least one number. Your function should return True if the password passed to it as its only parameter is good. Otherwise it should return False.
 Then use the random password generator from Example 4-4 (copy that function and paste it here) and the function you defined above, write a program that generates a random good password and displays it. Count and display the number of attempts that were needed before a good password was generated. Call the two functions mentioned above from a function named main in the file that you create for this exercise. Ensure that your main program only runs when your solution has not been imported into another file.
 
   Refer to [randomPasswordGenerator.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/randomPasswordGenerator.py)
 
-1. Create a program that identifies all of the words in a string entered by the user. Begin by writing a function that takes a string of text as its only parameter. Your function should return a list of the words in the string with the punctuation marks at the edge of the words removed. Do not remove punctuation marks that appear in the middle of a words, such as the apostrophes used to form a contraction. For example, if your function is provided with the string "Examples of contractions include: don't, isn't, and wouldn't." Your function should return the list ["Examples", "of", "contractions", "include", "don't", "isn't", "and", "wouldn't"].
+5. Create a program that identifies all of the words in a string entered by the user. Begin by writing a function that takes a string of text as its only parameter. Your function should return a list of the words in the string with the punctuation marks at the edge of the words removed. Do not remove punctuation marks that appear in the middle of a words, such as the apostrophes used to form a contraction. For example, if your function is provided with the string "Examples of contractions include: don't, isn't, and wouldn't." Your function should return the list ["Examples", "of", "contractions", "include", "don't", "isn't", "and", "wouldn't"].
 
    Write a main program that demonstrates your function. It should read a string from the user and display all of the words in the string with the punctuation marks removed. As a result, you should ensure that your main program only runs when your file has not been imported into another program.
 
   Refer to [wordSplit.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/wordSplit.py)
 
-1. Simulate 10,000 rolls of two dice. Begin by writing a function that simulates rolling a pair of six-sided dice. Your function will not take any parameters. It will return the total that was rolled on two dices as its only result.
+6. Simulate 10,000 rolls of two dice. Begin by writing a function that simulates rolling a pair of six-sided dice. Your function will not take any parameters. It will return the total that was rolled on two dices as its only result.
 Write a main program that uses your function to simulate rolling two six-sided dice 10,000 times. As your program runs, it should count the number of times that each total occurs. Then it should display a table that summarizes this data. Express the frequency for each total as a percentage of the total number of rolls. Your program should also display the percentage expected by probability theory for each total. Sample output is shown below. (Exe6-1)
 
   Total | Simulated % | Expected &
@@ -45,21 +45,21 @@ Write a main program that uses your function to simulate rolling two six-sided d
 
   Refer to [diceRollSimulation.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/diceRollSimulation.py)
 
-1. There is at least one word in the English language that contains each of the vowels (case insensitive) a, e, i, o, u and y exactly once and in order.
+7. There is at least one word in the English language that contains each of the vowels (case insensitive) a, e, i, o, u and y exactly once and in order.
 >Write a program that searches [words.txt](https://github.com/vikki1107/ProjectPy/blob/main/academic/words.txt) and displays all of the words that meet this constraint. (Exe7-6)
 
   Refer to [vowelWords.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/vowelWords.py)
 
-1. Create a square root function that takes two parameters. The first parameter, n, will be the number for which the square root is being computed. The second parameter, guess, will be the current guess for the square root. The guess parameter should have a default value of 1.0. Do not provide a default value for the first parameter. Your square root function will be recursive. The base case occurs when guess^2 is within 10^-12 of n. In this case, your function should return guess because it is close enough to the square root of n. Otherwise, your function should return the result of calling itself recursively with n as the first parameter and (guess + n/guess)/2 as the second parameter.
+8. Create a square root function that takes two parameters. The first parameter, n, will be the number for which the square root is being computed. The second parameter, guess, will be the current guess for the square root. The guess parameter should have a default value of 1.0. Do not provide a default value for the first parameter. Your square root function will be recursive. The base case occurs when guess^2 is within 10^-12 of n. In this case, your function should return guess because it is close enough to the square root of n. Otherwise, your function should return the result of calling itself recursively with n as the first parameter and (guess + n/guess)/2 as the second parameter.
 >Write a main program that demonstrate your square root function by computing the square root of several different values. When you call your square root function from the main program you should only pass one parameter to it so that the default value for guess is used. (Exe8-2)
 
   Refer to [findSqRoot.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/findSqRoot.py)
 
-1. Read the stock list from the file [stocklist.txt](https://github.com/vikki1107/ProjectPy/blob/main/academic/stocklist.txt). (The file is in the folder “Part 2: Data Collection and Preparation” on blackboard). For each stock on the list, retrieve the minute stock price data for an entire day. Create a new txt file for each stock, named after the stock symbol itself. In this file, save all minute stock price, one on each line. Keep two decimal places for stock prices.
+9. Read the stock list from the file [stocklist.txt](https://github.com/vikki1107/ProjectPy/blob/main/academic/stocklist.txt). (The file is in the folder “Part 2: Data Collection and Preparation” on blackboard). For each stock on the list, retrieve the minute stock price data for an entire day. Create a new txt file for each stock, named after the stock symbol itself. In this file, save all minute stock price, one on each line. Keep two decimal places for stock prices.
 
   Refer to [stockPriceCheck.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/stockPriceCheck.py)
 
-1. Data structure is critical for the term project. Consider the following data structure for a job posted by Google. [Job postings](https://www.google.com/about/careers/search?src=Online/Job+Board/indeed&utm_source=indeed&utm_medium=jobaggr&utm_campaign=freeaggr#!t=jo&jid=149335001)
+10. Data structure is critical for the term project. Consider the following data structure for a job posted by Google. [Job postings](https://www.google.com/about/careers/search?src=Online/Job+Board/indeed&utm_source=indeed&utm_medium=jobaggr&utm_campaign=freeaggr#!t=jo&jid=149335001)
 Consider using a list to capture the key information we are interested in. Here is the data structure I come up with.
 ``[‘business intelligent analyst, ‘Google’, ‘Mountain View, CA’, ‘NA’, ‘full time’, ‘BS/BA’, ‘4’, [‘business intelligence’, ‘data reporting’, ‘database query’, ‘java’, ‘python’, ‘SQL’, ‘Data Warehousing’, ‘Visualization’, ‘statistical and quantitative modeling’, ‘analytical problem solving skills’, ‘business judgment’, ‘presentation skills’]]``
 Please work with all your teammates and collect information on at least twenty jobs. Convert job information using the above data structure.
@@ -68,19 +68,19 @@ Although you share the data with your teammates, you shall independently write a
 
   Refer to [jobSkillsearch.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/jobSkillsearch.py)
 
-1. In the file [AAPL-NFLX.txt](https://github.com/vikki1107/ProjectPy/blob/main/academic/APPL-NFLX.txt), there are minute-level stock prices of AAPL and NFLX, each occupying one line. Please plot a line chart with time as your x-axis and stock price being your y-axis. The line chart must show the stock prices of both stocks. Please use different color and line styles for different stocks. Please label each of the two stocks: AAPL or NFLX and provide a legend for your figure. In the end, your x-axis should be labeled as “Time in Minutes” and your y-axis should be labeled as “Stock Price”.
+11. In the file [AAPL-NFLX.txt](https://github.com/vikki1107/ProjectPy/blob/main/academic/APPL-NFLX.txt), there are minute-level stock prices of AAPL and NFLX, each occupying one line. Please plot a line chart with time as your x-axis and stock price being your y-axis. The line chart must show the stock prices of both stocks. Please use different color and line styles for different stocks. Please label each of the two stocks: AAPL or NFLX and provide a legend for your figure. In the end, your x-axis should be labeled as “Time in Minutes” and your y-axis should be labeled as “Stock Price”.
 
   Refer to [stockLineChart.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/stockLineChart.py)
 
-1. In the file [AAPL-NFLX.txt](https://github.com/vikki1107/ProjectPy/blob/main/academic/APPL-NFLX.txt), there are minute-level stock prices of AAPL and NFLX, each occupying one line. Please plot a scatter with AAPL’s price on your x-axis and NFLX’s price on your y-axis. Your x-axis should be labeled as “AAPL” and your y-axis should be labeled as “NFLX”.
+12. In the file [AAPL-NFLX.txt](https://github.com/vikki1107/ProjectPy/blob/main/academic/APPL-NFLX.txt), there are minute-level stock prices of AAPL and NFLX, each occupying one line. Please plot a scatter with AAPL’s price on your x-axis and NFLX’s price on your y-axis. Your x-axis should be labeled as “AAPL” and your y-axis should be labeled as “NFLX”.
 
   Refer to [stockScatterPlot.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/stockScatterPlot.py)
 
-1. The file [histogram.txt](https://github.com/vikki1107/ProjectPy/blob/main/academic/histogram.txt) contains 10,000 data points, one on each line. Please plot a figure containing two normalized histograms based on the data in this file with number of bins = 50 and 100, respectively. Please label the x-axis as “Score” and y-axis as “Probability”. Display the figure title as “Test Score Distribution”. Please make sure you display the number of bins associated with each of the two histograms.
+13. The file [histogram.txt](https://github.com/vikki1107/ProjectPy/blob/main/academic/histogram.txt) contains 10,000 data points, one on each line. Please plot a figure containing two normalized histograms based on the data in this file with number of bins = 50 and 100, respectively. Please label the x-axis as “Score” and y-axis as “Probability”. Display the figure title as “Test Score Distribution”. Please make sure you display the number of bins associated with each of the two histograms.
 
   Refer to [histogramPlot.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/histogramPlot.py)
 
-1. In class, we discussed how to use gradient descent algorithm to come up with the best values of θ_0 and θ_1 to fit a simple linear regression model, which has only one input variable (feature). In this assignment, you will be asked to develop a gradient descent algorithm that can handle multiple linear regression models, which have more than one features. Suppose this MLR model has k features. Then your gradient descent algorithm should be able to find the best values for θ_0,  θ_1, …, θ_k.
+14. In class, we discussed how to use gradient descent algorithm to come up with the best values of θ_0 and θ_1 to fit a simple linear regression model, which has only one input variable (feature). In this assignment, you will be asked to develop a gradient descent algorithm that can handle multiple linear regression models, which have more than one features. Suppose this MLR model has k features. Then your gradient descent algorithm should be able to find the best values for θ_0,  θ_1, …, θ_k.
 To that end, your script needs to define three functions: one main function; one function that calculates the value for the cost function; and one function that computes the values for gradient descent.
 Your code will read data from a [multipleLinearRegression.csv](https://github.com/vikki1107/ProjectPy/blob/main/academic/multipleLinearRegression.csv). Each row of this file is one observation or one data point. Suppose this csv file has k+1 columns. The first k columns carry the values for x0, x1, …, xk. And the last column carries the value for y. (Be careful, this format is different from the one used in class)
 The csv file provided for this assignment has 4 columns. These data are for estimating the price of a used mini-cooper. The first column is the mileage of mini-cooper in 1000 miles; the second column is the model year; the third column is a binary variable, indicating whether this mini-cooper has T-top (yes = 1; no = 0); and the fourth and the last column is the actual price of mini-cooper (y in $). Based on this data set, we’d like to develop a multiple linear regression model, with x1 being mileage, x2 being model year, and x3 being T-top, to predict the price of a used mini-cooper. The csv file has 13 rows, indicating that we’ve collected historical data on 13 mini-coopers. That is, the sample size or the size of the training set is 13.
@@ -89,7 +89,7 @@ Please make sure your program will print out result of each iteration. Please pr
 
   Refer to [multipleLinearRegression.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/multipleLinearRegression.py)
 
-1. Bootstrap Resampling for Difference between Two Means
+15. Bootstrap Resampling for Difference between Two Means
 Imagine we have given some people a placebo and others a drug. The measured improvement (the more positive the better) is:
 
   Placebo: 54 51 58 44 55 52 42 47 58 46 (10 in total)
@@ -130,7 +130,7 @@ Imagine we have given some people a placebo and others a drug. The measured impr
 
   Refer to [bootstrapResamplingForMean.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/bootstrapResamplingForMean.py)
 
-1. Problem 2: Bootstrap Resampling – from Sample to Sampling Distribution
+16. Problem 2: Bootstrap Resampling – from Sample to Sampling Distribution
 A restaurant keeps a record of number of reservations it has received over the last 20 weekends. They are:
 
   48, 24, 51, 12, 21, 41, 25, 23, 32, 61, 19, 24, 29, 21, 23, 13, 32, 18, 42, 18
