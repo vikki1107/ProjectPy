@@ -90,44 +90,45 @@ Please make sure your program will print out result of each iteration. Please pr
     Refer to [multipleLinearRegression.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/multipleLinearRegression.py)
 
 15. Bootstrap Resampling for Difference between Two Means
-Imagine we have given some people a placebo and others a drug. The measured improvement (the more positive the better) is:
 
-   Placebo: 54 51 58 44 55 52 42 47 58 46 (10 in total)
-   Drug: 54 73 53 70 73 68 52 65 65 (9 in total)
-  
-   As you can see, the drug seems more effective on the average (the average measured improvement is nearly 63.7 (63 2/3 to be precise) for the drug and 50.7 for the placebo). But, is this difference in the average real? Formula-based statistics would use a t-test which entails certain assumptions about normality and variance; however, we are going to look at just the samples themselves and shuffle the labels. The meaning of this can be illustrated in the following table—in which we put all the people— labeling one column ‘Value’ and the other ‘Label’ (P stands for placebo, D for drug).
+    Imagine we have given some people a placebo and others a drug. The measured improvement (the more positive the better) is:
 
-  Value|54|51|58|	44|	55|	52 |42|	47|	58|	46|	54|	73|	53|	70|	73|	68|	52|	65|	65
-  ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---
-  Label|	P|	P|	P|	P|	P|	P|	P|	P|	P|	P|	D|	D|	D|	D|	D|	D|	|D|	D|D
+    Placebo: 54 51 58 44 55 52 42 47 58 46 (10 in total)
+    Drug: 54 73 53 70 73 68 52 65 65 (9 in total)
   
-   Shuffling the labels means that we will take the P’s and D’s and randomly distribute them among the patients. (Technically, we do a uniform random permutation of the label column.) Note that after shuffling, you will still have 10 P’s and 9 D’s. This might give:
+    As you can see, the drug seems more effective on the average (the average measured improvement is nearly 63.7 (63 2/3 to be precise) for the drug and 50.7 for the placebo). But, is this difference in the average real? Formula-based statistics would use a t-test which entails certain assumptions about normality and variance; however, we are going to look at just the samples themselves and shuffle the labels. The meaning of this can be illustrated in the following table—in which we put all the people— labeling one column ‘Value’ and the other ‘Label’ (P stands for placebo, D for drug).
+
+      Value|54|51|58|	44|	55|	52 |42|	47|	58|	46|	54|	73|	53|	70|	73|	68|	52|	65|	65
+      ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---
+      Label|	P|	P|	P|	P|	P|	P|	P|	P|	P|	P|	D|	D|	D|	D|	D|	D|	|D|	D|D
+  
+    Shuffling the labels means that we will take the P’s and D’s and randomly distribute them among the patients. (Technically, we do a uniform random permutation of the label column.) Note that after shuffling, you will still have 10 P’s and 9 D’s. This might give:
  
-  Value|54|51|58|	44|	55|	52 |42|	47|	58|	46|	54|	73|	53|	70|	73|	68|	52|	65|	65
-  ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---
-  Label|	P|	P|	D|	P|	P|	D|	D|	D|	D|	D|	P|	P|	P|	D|	P|	P|	D|	P|	D
+      Value|54|51|58|	44|	55|	52 |42|	47|	58|	46|	54|	73|	53|	70|	73|	68|	52|	65|	65
+      ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---
+      Label|	P|	P|	D|	P|	P|	D|	D|	D|	D|	D|	P|	P|	P|	D|	P|	P|	D|	P|	D
   
-   We can then look at the difference in the average P value vs. the average D value. We get an average of 59.0 for P and 54.4 for D. We repeat this shuffle-then-measure procedure 10,000 times and ask what fraction of time we get a difference between drug and placebo greater than or equal to the measured difference of 63.67 - 50.7 = 12.97.
+    We can then look at the difference in the average P value vs. the average D value. We get an average of 59.0 for P and 54.4 for D. We repeat this shuffle-then-measure procedure 10,000 times and ask what fraction of time we get a difference between drug and placebo greater than or equal to the measured difference of 63.67 - 50.7 = 12.97.
 
-   >Write a program based on the numbers provided above. In your program, create a function that randomly shuffles the labels. Then in your main function, repeating the random shuffling 10,000 times. For each shuffle, calculate the difference between the average P value and the average D value. You will then have 10,000 values of difference. Plot a histogram based on these 10,000 values of difference. Then compute the probability that the difference is greater than or equal to 13. In the end, display the following message:
+    >Write a program based on the numbers provided above. In your program, create a function that randomly shuffles the labels. Then in your main function, repeating the random shuffling 10,000 times. For each shuffle, calculate the difference between the average P value and the average D value. You will then have 10,000 values of difference. Plot a histogram based on these 10,000 values of difference. Then compute the probability that the difference is greater than or equal to 13. In the end, display the following message:
 
-   “If the drug is as effective as the placebo, then the probability that the different between the average P value and the average D value is greater than or equal to 12.97 is (fill in your probability here). Thus, we conclude that the drug is (choose ‘effective’ or ‘ineffective’) given a significance level of 1%.”
+     “If the drug is as effective as the placebo, then the probability that the different between the average P value and the average D value is greater than or equal to 12.97 is (fill in your probability here). Thus, we conclude that the drug is (choose ‘effective’ or ‘ineffective’) given a significance level of 1%.”
 
-  ```Pseudocode:
-  1. Measure the difference between the two group means.  The difference in means is measured by (sum(grpA) / len(grpA)) - (sum(grpB) / len(grpB)).  In this example the difference between the two group means is 12.97.
+      ```Pseudocode:
+      1. Measure the difference between the two group means.  The difference in means is measured by (sum(grpA) / len(grpA)) - (sum(grpB) / len(grpB)).  In this example the difference between the two group means is 12.97.
 
-  2. Set a counter to 0, this will count the number of times we get a difference between the means greater than or equal to 12.97.
+      2. Set a counter to 0, this will count the number of times we get a difference between the means greater than or equal to 12.97.
 
-  3. Do the following 10,000 times:
-  a. Shuffle the original measurements.  To do this:
-  i. put the values from all the groups into one array but remembering the start and end indexes of each group
-  ii. shuffle the values in the array, effectively reassigning the values to different groups
-  b. Measure the difference between the two group means, just as we did in step (1).
-  c. If the difference from step (3b) is greater than or equal to 12.97, increment our counter from step (2). Note: if our original difference between the means were a negative value we would check for values less than or equal to that value.
+      3. Do the following 10,000 times:
+      a. Shuffle the original measurements.  To do this:
+      i. put the values from all the groups into one array but remembering the start and end indexes of each group
+      ii. shuffle the values in the array, effectively reassigning the values to different groups
+      b. Measure the difference between the two group means, just as we did in step (1).
+      c. If the difference from step (3b) is greater than or equal to 12.97, increment our counter from step (2). Note: if our original difference between the means were a negative value we would check for values less than or equal to that value.
 
-  4. counter / 10,000 equals the probability of getting our observed difference of two means greater than or equal to 12.97, if there is in fact no significant difference.
+      4. counter / 10,000 equals the probability of getting our observed difference of two means greater than or equal to 12.97, if there is in fact no significant difference.
   ```
-
+   
    Refer to [bootstrapResamplingForMean.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/bootstrapResamplingForMean.py)
 
 16. Problem 2: Bootstrap Resampling – from Sample to Sampling Distribution
