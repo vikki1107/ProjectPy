@@ -94,6 +94,7 @@ Please make sure your program will print out result of each iteration. Please pr
     Imagine we have given some people a placebo and others a drug. The measured improvement (the more positive the better) is:
 
     Placebo: 54 51 58 44 55 52 42 47 58 46 (10 in total)
+    
     Drug: 54 73 53 70 73 68 52 65 65 (9 in total)
   
     As you can see, the drug seems more effective on the average (the average measured improvement is nearly 63.7 (63 2/3 to be precise) for the drug and 50.7 for the placebo). But, is this difference in the average real? Formula-based statistics would use a t-test which entails certain assumptions about normality and variance; however, we are going to look at just the samples themselves and shuffle the labels. The meaning of this can be illustrated in the following table—in which we put all the people— labeling one column ‘Value’ and the other ‘Label’ (P stands for placebo, D for drug).
@@ -127,9 +128,9 @@ Please make sure your program will print out result of each iteration. Please pr
       c. If the difference from step (3b) is greater than or equal to 12.97, increment our counter from step (2). Note: if our original difference between the means were a negative value we would check for values less than or equal to that value.
 
       4. counter / 10,000 equals the probability of getting our observed difference of two means greater than or equal to 12.97, if there is in fact no significant difference.
-  ```
+    ```
    
-   Refer to [bootstrapResamplingForMean.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/bootstrapResamplingForMean.py)
+    Refer to [bootstrapResamplingForMean.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/bootstrapResamplingForMean.py)
 
 16. Problem 2: Bootstrap Resampling – from Sample to Sampling Distribution
 A restaurant keeps a record of number of reservations it has received over the last 20 weekends. They are:
