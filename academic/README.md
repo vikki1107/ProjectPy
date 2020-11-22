@@ -35,13 +35,13 @@ Then use the random password generator from Example 4-4 (copy that function and 
 6. Simulate 10,000 rolls of two dice. Begin by writing a function that simulates rolling a pair of six-sided dice. Your function will not take any parameters. It will return the total that was rolled on two dices as its only result.
 Write a main program that uses your function to simulate rolling two six-sided dice 10,000 times. As your program runs, it should count the number of times that each total occurs. Then it should display a table that summarizes this data. Express the frequency for each total as a percentage of the total number of rolls. Your program should also display the percentage expected by probability theory for each total. Sample output is shown below. (Exe6-1)
 
-  Total | Simulated % | Expected &
-  --- | --- | ---
-  2  | 2.90 | 2.78
-  3  | 6.90 | 5.56
-  4  | 9.40 | 8.33
-  .. | ..   | ..
-  12 | 2.60 | 2.78
+      Total | Simulated % | Expected &
+      --- | --- | ---
+      2  | 2.90 | 2.78
+      3  | 6.90 | 5.56
+      4  | 9.40 | 8.33
+      .. | ..   | ..
+      12 | 2.60 | 2.78
 
    Refer to [diceRollSimulation.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/diceRollSimulation.py)
 
@@ -66,7 +66,7 @@ Please work with all your teammates and collect information on at least twenty j
 Note that same or similar qualification/skill may be phrased differently. Try to categorize those skills and qualifications into a few skillsets. For example, here Google calls it ‘business judgment’. Some other companies may call it ‘business acumen’ or ‘business sense’. They may be included in the same category or skillset. For another example, ‘statistical and quantitative modeling’ and ‘analytical problem solving skills” are also similar.
 Although you share the data with your teammates, you shall independently write a program to count the relative frequency of each skillset. Hint: you may need to create a separate python dictionary for each skillset.
 
-   Refer to [jobSkillsearch.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/jobSkillsearch.py)
+    Refer to [jobSkillsearch.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/jobSkillsearch.py)
 
 11. In the file [AAPL-NFLX.txt](https://github.com/vikki1107/ProjectPy/blob/main/academic/APPL-NFLX.txt), there are minute-level stock prices of AAPL and NFLX, each occupying one line. Please plot a line chart with time as your x-axis and stock price being your y-axis. The line chart must show the stock prices of both stocks. Please use different color and line styles for different stocks. Please label each of the two stocks: AAPL or NFLX and provide a legend for your figure. In the end, your x-axis should be labeled as “Time in Minutes” and your y-axis should be labeled as “Stock Price”.
 
@@ -87,31 +87,31 @@ The csv file provided for this assignment has 4 columns. These data are for esti
 Make sure that your code will be able to handle general MLR models, not just the one described above. That is, your program should be able to generate correct values for all θ’s if the program is fed with another csv file of same format, but with different number of rows and columns.
 Please make sure your program will print out result of each iteration. Please print result of each iteration in the same row, including iteration number, all θ values of this iteration, value of the cost function of this iteration, the different between the cost function value of this iteration and previous iteration.
 
-   Refer to [multipleLinearRegression.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/multipleLinearRegression.py)
+    Refer to [multipleLinearRegression.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/multipleLinearRegression.py)
 
 15. Bootstrap Resampling for Difference between Two Means
 Imagine we have given some people a placebo and others a drug. The measured improvement (the more positive the better) is:
 
-  Placebo: 54 51 58 44 55 52 42 47 58 46 (10 in total)
-  Drug: 54 73 53 70 73 68 52 65 65 (9 in total)
-
-  As you can see, the drug seems more effective on the average (the average measured improvement is nearly 63.7 (63 2/3 to be precise) for the drug and 50.7 for the placebo). But, is this difference in the average real? Formula-based statistics would use a t-test which entails certain assumptions about normality and variance; however, we are going to look at just the samples themselves and shuffle the labels. The meaning of this can be illustrated in the following table—in which we put all the people— labeling one column ‘Value’ and the other ‘Label’ (P stands for placebo, D for drug).
+   Placebo: 54 51 58 44 55 52 42 47 58 46 (10 in total)
+   Drug: 54 73 53 70 73 68 52 65 65 (9 in total)
+  
+   As you can see, the drug seems more effective on the average (the average measured improvement is nearly 63.7 (63 2/3 to be precise) for the drug and 50.7 for the placebo). But, is this difference in the average real? Formula-based statistics would use a t-test which entails certain assumptions about normality and variance; however, we are going to look at just the samples themselves and shuffle the labels. The meaning of this can be illustrated in the following table—in which we put all the people— labeling one column ‘Value’ and the other ‘Label’ (P stands for placebo, D for drug).
 
   Value|54|51|58|	44|	55|	52 |42|	47|	58|	46|	54|	73|	53|	70|	73|	68|	52|	65|	65
   ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---
   Label|	P|	P|	P|	P|	P|	P|	P|	P|	P|	P|	D|	D|	D|	D|	D|	D|	|D|	D|D
-
-  Shuffling the labels means that we will take the P’s and D’s and randomly distribute them among the patients. (Technically, we do a uniform random permutation of the label column.) Note that after shuffling, you will still have 10 P’s and 9 D’s. This might give:
-
+  
+   Shuffling the labels means that we will take the P’s and D’s and randomly distribute them among the patients. (Technically, we do a uniform random permutation of the label column.) Note that after shuffling, you will still have 10 P’s and 9 D’s. This might give:
+ 
   Value|54|51|58|	44|	55|	52 |42|	47|	58|	46|	54|	73|	53|	70|	73|	68|	52|	65|	65
   ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---
   Label|	P|	P|	D|	P|	P|	D|	D|	D|	D|	D|	P|	P|	P|	D|	P|	P|	D|	P|	D
+  
+   We can then look at the difference in the average P value vs. the average D value. We get an average of 59.0 for P and 54.4 for D. We repeat this shuffle-then-measure procedure 10,000 times and ask what fraction of time we get a difference between drug and placebo greater than or equal to the measured difference of 63.67 - 50.7 = 12.97.
 
-  We can then look at the difference in the average P value vs. the average D value. We get an average of 59.0 for P and 54.4 for D. We repeat this shuffle-then-measure procedure 10,000 times and ask what fraction of time we get a difference between drug and placebo greater than or equal to the measured difference of 63.67 - 50.7 = 12.97.
+   >Write a program based on the numbers provided above. In your program, create a function that randomly shuffles the labels. Then in your main function, repeating the random shuffling 10,000 times. For each shuffle, calculate the difference between the average P value and the average D value. You will then have 10,000 values of difference. Plot a histogram based on these 10,000 values of difference. Then compute the probability that the difference is greater than or equal to 13. In the end, display the following message:
 
-    >Write a program based on the numbers provided above. In your program, create a function that randomly shuffles the labels. Then in your main function, repeating the random shuffling 10,000 times. For each shuffle, calculate the difference between the average P value and the average D value. You will then have 10,000 values of difference. Plot a histogram based on these 10,000 values of difference. Then compute the probability that the difference is greater than or equal to 13. In the end, display the following message:
-
-  “If the drug is as effective as the placebo, then the probability that the different between the average P value and the average D value is greater than or equal to 12.97 is (fill in your probability here). Thus, we conclude that the drug is (choose ‘effective’ or ‘ineffective’) given a significance level of 1%.”
+   “If the drug is as effective as the placebo, then the probability that the different between the average P value and the average D value is greater than or equal to 12.97 is (fill in your probability here). Thus, we conclude that the drug is (choose ‘effective’ or ‘ineffective’) given a significance level of 1%.”
 
   ```Pseudocode:
   1. Measure the difference between the two group means.  The difference in means is measured by (sum(grpA) / len(grpA)) - (sum(grpB) / len(grpB)).  In this example the difference between the two group means is 12.97.
@@ -133,16 +133,16 @@ Imagine we have given some people a placebo and others a drug. The measured impr
 16. Problem 2: Bootstrap Resampling – from Sample to Sampling Distribution
 A restaurant keeps a record of number of reservations it has received over the last 20 weekends. They are:
 
-  48, 24, 51, 12, 21, 41, 25, 23, 32, 61, 19, 24, 29, 21, 23, 13, 32, 18, 42, 18
+    48, 24, 51, 12, 21, 41, 25, 23, 32, 61, 19, 24, 29, 21, 23, 13, 32, 18, 42, 18
+   
+    The restaurant has hired you as a consultant to help determine the sampling distribution of the number of reservations over weekend. It is very useful because it helps answer the questions such as: what is the probability that the restaurant will receive at least 40 reservations over the coming weekend.
 
-  The restaurant has hired you as a consultant to help determine the sampling distribution of the number of reservations over weekend. It is very useful because it helps answer the questions such as: what is the probability that the restaurant will receive at least 40 reservations over the coming weekend.
+    You decide to use bootstrap resampling to generate the sampling distribution. To that end, you would like to write a Python program. In this program, please define a function called resampling. This function will take a list of numbers and return another list of numbers of equal length from random sampling with replacement.
 
-  You decide to use bootstrap resampling to generate the sampling distribution. To that end, you would like to write a Python program. In this program, please define a function called resampling. This function will take a list of numbers and return another list of numbers of equal length from random sampling with replacement.
+    In your main function, repeat the resampling process 10,000 times. For each iteration, compute and store its mean, which is called a sample mean. After the completion of 10,000 iterations, compute and display the mean and standard deviation of these 10,000 sample means. Then your program will allow the end user to enter a positive integer. You program will be able to compute and display the probability that the number of reservations will be more than the number entered by the end user.
 
-  In your main function, repeat the resampling process 10,000 times. For each iteration, compute and store its mean, which is called a sample mean. After the completion of 10,000 iterations, compute and display the mean and standard deviation of these 10,000 sample means. Then your program will allow the end user to enter a positive integer. You program will be able to compute and display the probability that the number of reservations will be more than the number entered by the end user.
+    Here is an explanation how random resampling with replacement works.
 
-  Here is an explanation how random resampling with replacement works.
+    Consider an original list of 3 numbers: list = [1, 3, 4]. The random resampling process works like this: randomly pick one number at a time with equal probability (in this case, 1/3 probability for each number); repeat the first step until we have len(list) numbers (in this case, 3 numbers) in our new list. Suppose the first number randomly selected from the list is 3. Then we randomly select another number for [1, 3, 4] with equal probability again. Even though 3 was selected in the first round, it seems like another 3 replaces it in the original list when we select again. This is why it is called sampling WITH REPLACEMENT. Suppose the second number selected is 4. And we will randomly select one more number from the same list [1, 3, 4] with equal probability. Let’s say, we have a 3 again. In the end, the first sample we randomly generated from [1, 3, 4] is [3, 4, 3]. Note that the new list and the old list are of equal length, each having 3 numbers. We can repeat this resampling process many times.
 
-  Consider an original list of 3 numbers: list = [1, 3, 4]. The random resampling process works like this: randomly pick one number at a time with equal probability (in this case, 1/3 probability for each number); repeat the first step until we have len(list) numbers (in this case, 3 numbers) in our new list. Suppose the first number randomly selected from the list is 3. Then we randomly select another number for [1, 3, 4] with equal probability again. Even though 3 was selected in the first round, it seems like another 3 replaces it in the original list when we select again. This is why it is called sampling WITH REPLACEMENT. Suppose the second number selected is 4. And we will randomly select one more number from the same list [1, 3, 4] with equal probability. Let’s say, we have a 3 again. In the end, the first sample we randomly generated from [1, 3, 4] is [3, 4, 3]. Note that the new list and the old list are of equal length, each having 3 numbers. We can repeat this resampling process many times.
-
-   Refer to [bootstrapResamplingForDistribution.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/bootstrapResamplingForDistribution.py)
+    Refer to [bootstrapResamplingForDistribution.py](https://github.com/vikki1107/ProjectPy/blob/main/academic/bootstrapResamplingForDistribution.py)
