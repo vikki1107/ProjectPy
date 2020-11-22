@@ -1,8 +1,8 @@
-# Assignment 7.1
+#!/usr/bin/env python
 """
-Created on Thu Nov 19 13:38:38 2015
 @author: vikki
 """
+
 # Import modules
 import numpy as np
 import random

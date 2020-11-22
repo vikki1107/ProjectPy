@@ -1,8 +1,10 @@
-# Assignment 7.2
+#!/usr/bin/env python
 """
-Created on Thu Nov 19 16:18:08 2015
+Bootstrap Sampling from sample to Sample distribution
+
 @author: vikki
 """
+
 # Import the modules
 import numpy as np
 import math
@@ -31,10 +33,9 @@ def main():
     print "\nMean and Std deviation of %d iterations is %f and %f respectively" \
     %(iterations, mean_sample_mean, std_sample_mean)
 
-# Section below is to find out the probability for a random variable in a distribution
-# z here is nothing but the CDF(Cumulative distribution fuction) which is 1/2 * [1 + erf(x-μ / σ√2)]
-# And probability would be 1 - z
-
+    # Section below is to find out the probability for a random variable in a distribution
+    # z here is nothing but the CDF(Cumulative distribution fuction) which is 1/2 * [1 + erf(x-μ / σ√2)]
+    # And probability would be 1 - z
     user_input = float(input("Now please enter a positive integer to find the probability: "))
     
     while user_input < 0:

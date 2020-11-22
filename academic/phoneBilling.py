@@ -1,4 +1,4 @@
-# Assignment 1
+#!/usr/bin/env python
 """
 A particular cell phone plan includes 50 minutes of air time and 50 text messages for $15.00 a month. 
 Each additional minute of air time costs $0.25, while additional text messages cost $0.15 each. 
@@ -10,7 +10,6 @@ Display the base charge, additional minutes charge (if any), additional text mes
 Only display the additional minute and text message charges if the user incurred costs in these categories. 
 Ensure that all of the charges are displayed using 2 decimal places.
 
-Created on Wed Oct 07 11:09:00 2015
 @author: Vivek
 """
 

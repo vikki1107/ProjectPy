@@ -1,8 +1,8 @@
-# Assignment 5.1
+#!/usr/bin/env python
 """
-Created on Wed Nov 11 18:01:30 2015
 @author: vikki
 """
+
 # Import modules responsible for plotting
 import matplotlib.pyplot as plt
 import numpy as np
@@ -14,7 +14,7 @@ y = []
 z = []
 
 # Open the file and store the values into stock_list list
-with open("program-11-AAPL-NFLX.txt", "r") as f:
+with open("AAPL-NFLX.txt", "r") as f:
     for line in f:
         stock_list.append(line.strip('\n').strip().split(','))
 

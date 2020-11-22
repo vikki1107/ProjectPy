@@ -1,8 +1,10 @@
-# Assignment 4.2
+#!/usr/bin/env python
 """
-Created on Mon Nov  2 09:30:02 2015
+Program 10
+
 @author: vikki
 """
+
 #Job list
 JobList = [['business intelligent analyst', 'Google', 'Mountain View CA', 'NA', 'full time', 'BS/BA', '4', ['business intelligence', 'data reporting', 'mySQL', 'Object oriented programming', 'python', 'Data Warehousing', 'Visualization', 'statistical modeling', 'quantitative modeling', 'analytical problem solving', 'business judgment', 'presentation']],
 ['Data Scientist', 'Techshed', 'Foster City', 'NA', 'full time', 'BS/BA', '3+', ['data analysis', 'forecasting', 'ROI Modeling', 'Business Intelligence', 'SQL', 'R', 'SAS', 'Data warehouse programming', 'marketing strategies', 'business support']],

@@ -1,24 +1,31 @@
-# Assignment 3.2
+#!/usr/bin/env python
 """
-Created on Tue Oct 27 15:00:51 2015
+There is at least one word in the English language that contains each of the vowels (case insensitive) a, e, i, o, u and y exactly once and in order. 
+Write a program that searches words.txt and displays all of the words that meet this constraint.
+
 @author: vikki
 """
+
 # Global variables declaration
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']
 output = []
 
 # helper function to check if there are vowels in words.
 def check(word, vowels):
-    vowel_count = 0 # local variable to count the vowels in words
+    # local variable to count the vowels in words
+    vowel_count = 0 
     n = 0    
-# check if there are more than 6 vowels in a word if so then it doesnt satisfy our condition
+    
+    # check if there are more than 6 vowels in a word if so then it doesnt satisfy our condition
     for i in range(len(word)):
         if word[i].lower() in vowels:
             n += 1
-    if n == 6: # if vowels count is only 6 then check if they are in order as below        
-# check first letter from word matches the first letter of vowel, if not then check the next letter and so on 
-# if any letter from a word matches the first vowel then increment the vowel count and check for the second vowel sequentially.
-# When the vowel_count matches the length of dict vowel i,e 6 then return True i,e the word has vowels present in order
+
+    # if vowels count is only 6 then check if they are in order as below        
+    if n == 6: 
+        # check first letter from word matches the first letter of vowel, if not then check the next letter and so on 
+        # if any letter from a word matches the first vowel then increment the vowel count and check for the second vowel sequentially.
+        # When the vowel_count matches the length of dict vowel i,e 6 then return True i,e the word has vowels present in order
         for letter in word:
             if letter.lower() == vowels[vowel_count]:
                 vowel_count += 1

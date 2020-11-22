@@ -1,6 +1,7 @@
-# Assignment 5.3
+#!/usr/bin/env python
 """
-Created on Wed Nov 11 20:58:22 2015
+Histogram Plot
+
 @author: vikki
 """
 # Import the plot modules 
@@ -11,7 +12,7 @@ import matplotlib.pyplot as plt
 data = []
 
 # Open file and store all the values in list data
-with open("program-13.txt", "r") as f:
+with open("histogram.txt", "r") as f:
     for line in f:
         data.append(line.strip())
 

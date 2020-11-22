@@ -1,6 +1,7 @@
-# Project - Data Visualization
+#!/usr/bin/env python
 """
-Created on Thu Nov 26 10:29:06 2015
+Data Visualization
+
 @author: vikki
 """
 

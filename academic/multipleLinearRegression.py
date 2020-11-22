@@ -1,9 +1,10 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python
 """
-Created on Wed Nov 18 14:35:00 2015
+Multiple Linear Regression Model
 
 @author: vikki
 """
+
 # Import modules required for this code
 from numpy import *
 import numpy as np
@@ -66,7 +67,7 @@ def main():
     x1 = []
 #    filename = raw_input("Please enter the full path of a file on which you wish to perform gradient decent:\n")
 #    data = genfromtxt(filename, delimiter = ',')
-    data = genfromtxt("program-14-data.csv", delimiter = ',')
+    data = genfromtxt("regression.csv", delimiter = ',')
     
     k = len(data[0])
     m = len(data)

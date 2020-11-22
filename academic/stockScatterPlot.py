@@ -1,6 +1,5 @@
-# Assignment 5.2
+#!/usr/bin/env python
 """
-Created on Wed Nov 11 20:33:24 2015
 @author: vikki
 """
 
@@ -13,7 +12,7 @@ stock_list = []
 stock_values = []
 
 # Create a list from the text file
-with open("program-11-AAPL-NFLX.txt", "r") as f:
+with open("AAPL-NFLX.txt", "r") as f:
     for line in f:
         stock_list.append(line.strip('\n').strip().split(','))
 

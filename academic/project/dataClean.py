@@ -1,6 +1,10 @@
-# Author: Vivek
-# This script will take the uncleaned joblist file and cleans the data within it by removing unnecessary fields and 
-# store it under a new file which will be used for data visualization
+#!/usr/bin/env python
+"""
+This script will take the uncleaned joblist file and cleans the data within it by removing unnecessary fields and 
+store it under a new file which will be used for data visualization
+
+Author: Vivek
+"""
 
 import re
 
